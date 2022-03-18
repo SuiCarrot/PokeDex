@@ -47,6 +47,12 @@ app.get("/", (req, res) => {
   res.render("index", {pokedex});
 });
 
+app.get("/detalhes/:id", (req, res) => {
+  const id = req.params.id;
+  const pokemon = pokedex[id]
+  res.render("detalhes", {pokemon});
+});
+
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
 );

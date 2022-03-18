@@ -16,14 +16,16 @@
 
         <div class="cartas">
           <img src="<%= pokemon.imagem %>" alt="" />
-          <h2><%= pokemon.nome %></h2>
+          <h2><%= pokemon.nome %> <%=pokemon.numero%></h2>
           <p class="descricao"><%= pokemon.descricao %></p>
           <p>Tipo: <%= pokemon.tipo %></p>
-          <button value="id" type="button" id="btn">Detalhes</button>
+          <button type="button" id="btn-detalhes">Detalhes</button>
         </div>
         <% }) %>
       </section>
     </main>
+    <footer>
+    </footer>
   </body>
   <script src="/public/js/script.js"></script>
 </html>
