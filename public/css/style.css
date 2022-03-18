@@ -47,15 +47,21 @@ p{
 .descricao{
     margin-bottom: 1rem;
 }
-button{
-    padding: 0.5rem;
-    text-align: center;
-    margin-top: 1rem;
-    background-color: red;
-    text-shadow: 0.5px 0.5px 0.5px whitesmoke;
-}
-#btn:hover{
-    cursor: pointer;
-}
 
-/* font-family: 'Press Start 2P', cursive; */
+a{
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+}
+a:hover {
+    cursor: pointer;
+  }
+
+a:link {
+  }
+  
+  a:visited {
+color: black;
+  }
+   
+  a:active {
+  }
