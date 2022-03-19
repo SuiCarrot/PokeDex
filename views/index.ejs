@@ -9,16 +9,17 @@
   </head>
   <body>
     <header>
+      <a href="/cadastro" class="cadastro cadastro--pan"><span>Cadastrar Pokemon</span></a>
     </header>
     <main>
       <section id="pokemons">
         <% pokedex.forEach((pokemon) => { %>
-  <a href="/detalhes/<%= pokemon.id%>">
+  <a href="/detalhes/<%= pokemon.id%>" class="cards">
         <div class="cartas">
           <img src="<%= pokemon.imagem %>" alt="<%= pokemon.imagemAlt %>" />
           <h2><%= pokemon.nome %> Id: <%=pokemon.numero%></h2>
           <p class="descricao"><%= pokemon.descricao %></p>
-          <p>Tipo: <%= pokemon.tipo %></p>
+          <p>Type: <%= pokemon.tipo %></p>
   </a>
         </div>
         <% }) %>

@@ -3,7 +3,12 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif
+    font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
 header{
@@ -28,8 +33,7 @@ main {
 .cartas{
     display: flex;
     width: 15rem;
-    box-shadow: 3px 3px 3px 3px #00000020  ;
-    padding: 2rem;
+    box-shadow: 3px 3px 3px 3px #00000020 ;
     justify-content: space-around;
     flex-direction: column;
     text-align: center;
@@ -48,20 +52,72 @@ p{
     margin-bottom: 1rem;
 }
 
-a{
+.cards{
     text-decoration: none;
     font-family: 'Rubik', sans-serif;
+    transition: all 0.5s ease-in-out 0s;
+    text-shadow: 0.8px 0.8px grey
 }
-a:hover {
+.cards:hover {
     cursor: pointer;
-  }
-
-a:link {
+    resize: both;
+    transform: scale(1.1);
   }
   
-  a:visited {
+.cards:visited {
 color: black;
   }
    
-  a:active {
-  }
+body{
+    background: url(../img/background2.png)
+}
+
+.cadastro {
+    text-decoration: none;
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 1.5rem 3rem;
+	margin: 0;
+	font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+    color: red;
+}
+
+.cadastro::before,
+.cadastro::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.cadastro--pan {
+	font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	border: 3px solid black;
+	border-radius: 3rem;
+	overflow: hidden;
+}
+
+.cadastro--pan span {
+	position: relative;
+	mix-blend-mode: difference;
+}
+
+.cadastro--pan::before {
+	content: '';
+	background: rgba(255, 0, 0, 0.904);
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.cadastro--pan:hover::before {
+	transform: translate3d(0,-100%,0);
+}
+.cadastro--pan:hover{
+    color: whitesmoke;
+}
