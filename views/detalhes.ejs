@@ -14,13 +14,15 @@
         <main>
             <section id="pokemons">    
               <div class="cartas">
-                <img src="<%= pokemon.imagem %>" alt="" />
-                <h2><%= pokemon.nome %> Id: <%=pokemon.numero%></h2>
-                <p class="descricao"><%= pokemon.descricao %></p>
-                <p>Tipo: <%= pokemon.altura %></p>
-                <p>Tipo: <%= pokemon.peso %></p>
-                <p>Tipo: <%= pokemon.categoria %></p>
-                <p>Tipo: <%= pokemon.habilidade %></p>               
+                <img src="../<%= pokemon.imagem %>" alt="<%= pokemon.imagemAlt %>" id="img-detalhes"/>
+                <div id="texto-detalhes">
+                  <h2><%= pokemon.nome %> Id: <%=pokemon.numero%></h2>
+                  <p class="descricao"><%= pokemon.descricao %></p>
+                  <p>Height: <%= pokemon.altura %></p>
+                  <p>Weight: <%= pokemon.peso %></p>
+                  <p>Category: <%= pokemon.categoria %></p>
+                  <p>Type: <%= pokemon.habilidade %></p>  
+                </div>             
               </div>
             </section>
           </main>

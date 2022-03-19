@@ -15,3 +15,37 @@ header{
     background-repeat: no-repeat;
 
 }
+.cartas{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#texto-detalhes{
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    size: 40%;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 0.8px 0.8px grey  
+
+}
+#img-detalhes{
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    size: 50%;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+main{
+    background-image: url(../img/background3.png);
+    background-size: cover;
+}
