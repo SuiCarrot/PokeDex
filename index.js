@@ -5,6 +5,7 @@ const port = 3000; // Const para armanezar a porta do servidor
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded());
 
 const pokedex = [
   {
@@ -64,8 +65,13 @@ app.get("/detalhes/:id", (req, res) => {
   res.render("detalhes", { pokemon });
 });
 app.get("/cadastro", (req, res) => {
-  const cadastro=undefined
+  const cadastro = undefined;
   res.render("cadastro", { cadastro });
+});
+app.post("/add", (req, res) => {
+  const pokemon = req.body;
+  pokedex.push(pokemon);
+  res.redirect("/");
 });
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
