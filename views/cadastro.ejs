@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style-cadastro.css" />
+
     <title>Cadastro</title>
   </head>
   <body>
@@ -11,7 +13,7 @@
     <main>
       <section id="cadastro">
         <h2>Cadastre um Pokemon</h2>
-        <form action="">
+        <form action="/add" method="post">
           <label for="nome">Nome</label>
           <input id="nome" type="text" name="nome" />
 
@@ -21,7 +23,7 @@
           <label for="tipo">Tipo</label>
           <input id="tipo" type="text" name="tipo" />
 
-          <label for="imagem"> LINK DA iMAGEM</label>
+          <label for="imagem"> Link da imagem</label>
           <input id="imagem" type="text" name="imagem" />
 
           <button id="btnCadastrar" type="submit">Cadastrar</button>
