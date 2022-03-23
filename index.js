@@ -68,10 +68,14 @@ app.get("/cadastro", (req, res) => {
   const cadastro = undefined;
   res.render("cadastro", { cadastro });
 });
-app.post("/add", (req, res) => {
+app.post("/create", (req, res) => {
   const pokemon = req.body;
+  pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
   res.redirect("/");
+});
+app.put("/update/:id", (req, res) => {
+  res.send("Olá");
 });
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
