@@ -74,9 +74,6 @@ app.post("/create", (req, res) => {
   pokedex.push(pokemon);
   res.redirect("/");
 });
-app.put("/update/:id", (req, res) => {
-  res.send("Olá");
-});
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
 );
