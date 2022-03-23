@@ -11,12 +11,12 @@
 }
 
 header{
-    background-color: rgba(194, 6, 6, 0.644);
+    padding: 4rem;
+    background-color: rgba(170, 3, 3, 0.644);
     background-image: url("../img/pokedex-3d-logo.png");
     background-position: center;
     background-size: 30%;
     background-repeat: no-repeat;
-    min-height: 10rem;
 
 }
 .cartas{
@@ -60,6 +60,7 @@ main{
 }
 
 .voltar {
+    max-height: 1rem;
     text-decoration: none;
 	pointer-events: auto;
 	cursor: pointer;
@@ -70,7 +71,9 @@ main{
 	font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
 	font-size: inherit;
 	position: relative;
-	display: inline-block;
+	display: flex;
+    size: 20%;
+    max-width: fit-content;
     color: red;
 }
 
