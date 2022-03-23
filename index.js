@@ -12,7 +12,7 @@ const pokedex = [
     numero: "001",
     nome: "Bulbasaur",
     tipo: "Grass and Poison",
-    imagem: "img/bulbasaur.png",
+    imagem: "../img/bulbasaur.png",
     imagemAlt:
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
     descricao:
@@ -27,7 +27,7 @@ const pokedex = [
     numero: "004",
     nome: "Charmander",
     tipo: "Fire",
-    imagem: "img/charmander.png",
+    imagem: "../img/charmander.png",
     imagemAlt:
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
     descricao:
@@ -42,7 +42,7 @@ const pokedex = [
     numero: "007",
     nome: "Squirtle",
     tipo: "Water",
-    imagem: "img/squirtle.png",
+    imagem: "../img/squirtle.png",
     imagemAlt:
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
     descricao:
@@ -70,8 +70,10 @@ app.get("/cadastro", (req, res) => {
 });
 app.post("/create", (req, res) => {
   const pokemon = req.body;
-  pokemon.id = pokedex.length + 1;
+  pokemon.id = pokedex.length;
+  console.log(pokemon)
   pokedex.push(pokemon);
+  console.log(pokedex)
   res.redirect("/");
 });
 app.listen(port, () =>
