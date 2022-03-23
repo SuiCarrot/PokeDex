@@ -5,20 +5,25 @@
     padding: 0px;
     font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif
 }
+*::after,
+*::before {
+	box-sizing: border-box;
+}
 
 header{
-    padding: 4rem;
-    background-color: red;
+    background-color: rgba(194, 6, 6, 0.644);
     background-image: url("../img/pokedex-3d-logo.png");
     background-position: center;
     background-size: 30%;
     background-repeat: no-repeat;
+    min-height: 10rem;
 
 }
 .cartas{
     display: flex;
     justify-content: center;
     align-content: center;
+    flex-wrap: wrap;
 }
 #texto-detalhes{
     display: flex;
@@ -29,7 +34,8 @@ header{
     justify-content: space-evenly;
     text-align: center;
     font-size: 2rem;
-    text-shadow: 0.8px 0.8px grey  
+    text-shadow: 0.8px 0.8px grey;
+    max-width: 35rem; 
 
 }
 #img-detalhes{
@@ -39,6 +45,7 @@ header{
     size: 50%;
     align-items: center;
     justify-content: center;
+    max-width: 30rem; 
 }
 p{
     font-family: 'Rubik', sans-serif;
@@ -46,6 +53,58 @@ p{
     font-size: 1.5rem;
 }
 main{
-    background-image: url(../img/background3.png);
+    flex: auto;
+    background-image: url(../img/background-detalhes.gif);
     background-size: cover;
+    background-position: center;
+}
+
+.voltar {
+    text-decoration: none;
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 1.5rem 3rem;
+	margin: 0;
+	font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+    color: red;
+}
+
+.voltar::before,
+.voltar::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.voltar--pan {
+	font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	border: 3px solid black;
+	border-radius: 3rem;
+	overflow: hidden;
+}
+
+.voltar--pan span {
+	position: relative;
+	mix-blend-mode: difference;
+}
+
+.voltar--pan::before {
+	content: '';
+	background: rgba(255, 0, 0, 0.904);
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.voltar--pan:hover::before {
+	transform: translate3d(0,-100%,0);
+}
+.voltar--pan:hover{
+    color: whitesmoke;
 }
