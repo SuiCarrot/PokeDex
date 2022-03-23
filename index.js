@@ -71,9 +71,7 @@ app.get("/cadastro", (req, res) => {
 app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length;
-  console.log(pokemon)
   pokedex.push(pokemon);
-  console.log(pokedex)
   res.redirect("/");
 });
 app.listen(port, () =>
