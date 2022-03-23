@@ -60,20 +60,19 @@ main{
 }
 
 .voltar {
-    max-height: 1rem;
+    max-height: 1vmax;
+    width: 5vmax;
     text-decoration: none;
 	pointer-events: auto;
 	cursor: pointer;
 	background: #e7e7e7;
 	border: none;
-	padding: 1.5rem 3rem;
+	padding: 1.5vmax 3vmax;
 	margin: 0;
 	font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
-	font-size: inherit;
+	font-size: 1vmax;
 	position: relative;
 	display: flex;
-    size: 20%;
-    max-width: fit-content;
     color: red;
 }
 
@@ -90,7 +89,7 @@ main{
 	font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
 	font-weight: 700;
 	border: 3px solid black;
-	border-radius: 3rem;
+	border-radius: 3vmax;
 	overflow: hidden;
 }
 
@@ -106,7 +105,7 @@ main{
 }
 
 .voltar--pan:hover::before {
-	transform: translate3d(0,-100%,0);
+	transform: scale(1.5) translate3d(0,-100%,0);
 }
 .voltar--pan:hover{
     color: whitesmoke;

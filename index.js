@@ -17,8 +17,8 @@ const pokedex = [
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
     descricao:
       "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger.",
-    altura: "0.7m",
-    peso: "6.9kg",
+    altura: "0.7",
+    peso: "6.9",
     categoria: "Seed",
     habilidade: "Overgrow",
     id: 0,
@@ -32,8 +32,8 @@ const pokedex = [
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
     descricao:
       "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
-    altura: "0.6m",
-    peso: "8.5kg",
+    altura: "0.6",
+    peso: "8.5",
     categoria: "Lizard",
     habilidade: "Blaze",
     id: 1,
@@ -47,8 +47,8 @@ const pokedex = [
       "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
     descricao:
       "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
-    altura: "0.5m",
-    peso: "9.0kg",
+    altura: "0.5",
+    peso: "9.0",
     categoria: "Tiny Turtle",
     habilidade: "Torrent",
     id: 2,
