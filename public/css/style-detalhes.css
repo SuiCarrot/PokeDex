@@ -1,112 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
 }
 *::after,
 *::before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-header{
-    padding: 4rem;
-    background-color: rgba(170, 3, 3, 0.644);
-    background-image: url("../img/pokedex-3d-logo.png");
-    background-position: center;
-    background-size: 30%;
-    background-repeat: no-repeat;
-
+header {
+  padding: 5vh;
+  background-color: rgba(170, 3, 3, 0.644);
+  background-image: url("../img/pokedex-3d-logo.png");
+  background-position: center;
+  background-size: 30%;
+  background-repeat: no-repeat;
 }
-.cartas{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
+.cartas {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
-#texto-detalhes{
-    display: flex;
-    flex-direction: column;
-    padding: 10rem;
-    size: 40%;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-    font-size: 2rem;
-    text-shadow: 0.8px 0.8px grey;
-    max-width: 35rem; 
-
+#texto-detalhes {
+  display: flex;
+  flex-direction: column;
+  padding: 1vmax;
+  size: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0.8px 0.8px grey;
+  max-width: 35rem;
 }
-#img-detalhes{
-    display: flex;
-    flex-direction: column;
-    padding: 10rem;
-    size: 50%;
-    align-items: center;
-    justify-content: center;
-    max-width: 30rem; 
+#img-detalhes {
+  display: flex;
+  flex-direction: column;
+  padding: 1vmax;
+  size: 50%;
+  align-items: center;
+  justify-content: center;
+  max-width: 30rem;
 }
-p{
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
+p {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
-main{
-    flex: auto;
-    background-image: url(../img/background-detalhes.gif);
-    background-size: cover;
-    background-position: center;
+main {
+  display: flex;
+  flex: auto;
+  background-image: url(../img/background-detalhes.gif);
+  background-size: cover;
+  background-position: center;
+  justify-content: center;
+  height: 77vh;
 }
 
 .voltar {
-    max-height: 1vmax;
-    width: 5vmax;
-    text-decoration: none;
-	pointer-events: auto;
-	cursor: pointer;
-	background: #e7e7e7;
-	border: none;
-	padding: 1.5vmax 3vmax;
-	margin: 0;
-	font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
-	font-size: 1vmax;
-	position: relative;
-	display: flex;
-    color: red;
+  max-height: 1vmax;
+  width: 5vmax;
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1.5vmax 3vmax;
+  margin: 0;
+  font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+  font-size: 1vmax;
+  position: relative;
+  display: flex;
+  color: red;
 }
 
 .voltar::before,
 .voltar::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .voltar--pan {
-	font-family: 'Press Start 2P', cursive, Arial, Helvetica, sans-serif;
-	font-weight: 700;
-	border: 3px solid black;
-	border-radius: 3vmax;
-	overflow: hidden;
+  font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border: 3px solid black;
+  border-radius: 3vmax;
+  overflow: hidden;
 }
 
 .voltar--pan span {
-	position: relative;
-	mix-blend-mode: difference;
+  position: relative;
+  mix-blend-mode: difference;
 }
 
 .voltar--pan::before {
-	content: '';
-	background: rgba(255, 0, 0, 0.904);
-	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  content: "";
+  background: rgba(255, 0, 0, 0.904);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
 }
 
 .voltar--pan:hover::before {
-	transform: scale(1.5) translate3d(0,-100%,0);
+  transform: scale(1.5) translate3d(0, -100%, 0);
 }
-.voltar--pan:hover{
-    color: whitesmoke;
+.voltar--pan:hover {
+  color: whitesmoke;
 }
