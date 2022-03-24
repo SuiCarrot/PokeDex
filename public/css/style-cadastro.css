@@ -6,14 +6,17 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-image: url(../img/back-cadastro.png);
+  background-size: cover;
+}
 section#cadastro {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* padding: 5rem; */
+  padding-bottom: 5rem;
 }
 section#cadastro h2 {
-  background-color: green;
   width: 100%;
   text-align: center;
   font-size: 2rem;
@@ -35,7 +38,7 @@ section#cadastro form label {
 }
 section#cadastro form button {
   padding: 1rem;
-  width: 20%;
+  width: 30%;
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -44,9 +47,61 @@ section#cadastro form button {
   border: solid 1px red;
   color: red;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; 
 }
 section#cadastro form button:hover {
   background-color: red;
   color: #fff;
+}
+
+.btn {
+  max-height: 1vmax;
+  width: 5vmax;
+  text-decoration: none;
+  pointer-events: auto;
+  cursor: pointer;
+  background: #e7e7e7;
+  border: none;
+  padding: 1.5vmax 3vmax;
+  margin: 0;
+  font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+  font-size: 1vmax;
+  position: relative;
+  display: flex;
+  color: red;
+}
+
+.btn::before,
+.btn::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn--pan {
+  font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  border: 3px solid black;
+  border-radius: 3vmax;
+  overflow: hidden;
+}
+
+.btn--pan span {
+  position: relative;
+  mix-blend-mode: difference;
+}
+
+.btn--pan::before {
+  content: "";
+  background: rgba(255, 0, 0, 0.904);
+  transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.btn--pan:hover::before {
+  transform: scale(1.5) translate3d(0, -100%, 0);
+}
+.btn--pan:hover {
+  color: whitesmoke;
 }
