@@ -6,6 +6,7 @@ const port = 3000; // Const para armanezar a porta do servidor
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
+let message = "";
 
 const pokedex = [
   {
@@ -56,7 +57,7 @@ const pokedex = [
 ];
 
 app.get("/", (req, res) => {
-  res.render("index", { pokedex });
+  res.render("index", { pokedex, message });
 });
 
 app.get("/detalhes/:id", (req, res) => {
@@ -72,6 +73,10 @@ app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length;
   pokedex.push(pokemon);
+  message = `O pokemon foi cadastrado com sucesso.`;
+  setTimeout(() => {
+   message = "";
+  }, 1000);
   res.redirect("/");
 });
 app.listen(port, () =>

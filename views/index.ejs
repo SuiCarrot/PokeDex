@@ -8,6 +8,11 @@
     <title>PokeDex</title>
   </head>
   <body>
+    <% if(message != "") {  %>
+      <section id="message">
+          <p><%= message %></p> <span id="close">&times;</span>
+      </section>
+  <% }  %>
     <header>
       <a href="./cadastro" class="cadastro cadastro--pan"><span>Cadastrar Pokemon</span></a>
     </header>

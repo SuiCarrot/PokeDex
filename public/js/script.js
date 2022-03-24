@@ -1,6 +1,18 @@
-const btn = document.querySelector("#btn-detalhes");
+
+const closeMessage = document.querySelector("#close");
+/* const message = document.querySelector("#message"); */
+const message = document.getElementById("message")
 
 
-btn.addEventListener("click", function() {
-    location.replace("http://localhost:3000");
-})
+closeMessage.addEventListener("click", function (){
+/*     message.style.display = "none"; */
+    document.getElementById("message").style.display = "none";
+});
+
+setTimeout(() => {
+/*     message.style.display = "none"; */
+    document.getElementById("message").style.display = "none";
+}, 3000);
+
+
+
