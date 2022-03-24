@@ -123,13 +123,6 @@ body{
 .cadastro--pan:hover{
     color: whitesmoke;
 }
-
-span#close {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    transition: .3s;
-  }
   
   #message{
     display: block;
