@@ -9,7 +9,11 @@
 *::before {
   box-sizing: border-box;
 }
-
+body {
+  background-image: url(../img/background-detalhes.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 header {
   padding: 5vh;
   background-color: rgba(170, 3, 3, 0.644);
@@ -50,7 +54,7 @@ p {
   font-weight: bold;
   font-size: 1.5rem;
 }
-main {
+/* main {
   display: flex;
   flex: auto;
   background-image: url(../img/background-detalhes.gif);
@@ -58,7 +62,7 @@ main {
   background-position: center;
   justify-content: center;
   height: 77vh;
-}
+} */
 
 .voltar {
   max-height: 1vmax;
