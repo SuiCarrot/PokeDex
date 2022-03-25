@@ -59,7 +59,7 @@ const pokedex = [
 app.get("/", (req, res) => {
   setTimeout(() => {
     message = "";
-   }, 1000);
+   }, 5000);
   res.render("index.ejs", { pokedex:pokedex, message });
 });
 
