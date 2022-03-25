@@ -15,12 +15,13 @@ body {
   background-repeat: no-repeat;
 }
 header {
-  padding: 5vh;
+  padding: 5vh 0;
   background-color: rgba(170, 3, 3, 0.644);
   background-image: url("../img/pokedex-3d-logo.png");
   background-position: center;
-  background-size: 30%;
+  background-size:30vmax;
   background-repeat: no-repeat;
+  width: 100%;
 }
 .cartas {
   display: flex;
@@ -73,7 +74,7 @@ p {
   background: #e7e7e7;
   border: none;
   padding: 1.5vmax 3vmax;
-  margin: 0;
+  margin-left: 5vmax;
   font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
   font-size: 1vmax;
   position: relative;

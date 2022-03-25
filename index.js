@@ -75,7 +75,7 @@ app.post("/create", (req, res) => {
   pokedex.push(pokemon);
   message = `O pokemon foi cadastrado com sucesso.`;
   setTimeout(() => {
-   message = "";
+    message = "";
   }, 1000);
   res.redirect("/");
 });

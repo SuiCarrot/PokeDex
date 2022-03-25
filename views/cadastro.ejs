@@ -9,49 +9,118 @@
     <title>Cadastro</title>
     <style>
       header {
-        padding: 5vh;
+        padding: 2.5rem 0;
         background-color: red;
         background-image: url("../img/pokedex-3d-logo.png");
         background-position: center;
-        background-size: 40vmax;
+        background-size: 45vmax;
         background-repeat: no-repeat;
+        width: 100%;
+      }
+      .btn {
+        height: 1vmax;
+        width: 5vmax;
+        text-decoration: none;
+        pointer-events: auto;
+        cursor: pointer;
+        background: white;
+        padding: 1.5vmax 3vmax;
+        margin: 0 2.5rem;
+        font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+        font-size: 1.1vmax;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        color: red;
+      }
+
+      .btn::before,
+      .btn::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .btn--pan {
+        font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        border: 3px solid black;
+        border-radius: 3vmax;
+        overflow: hidden;
+      }
+
+      .btn--pan span {
+        position: relative;
+        mix-blend-mode: difference;
+      }
+
+      .btn--pan::before {
+        content: "";
+        background: rgba(255, 0, 0, 0.904);
+        transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+      }
+
+      .btn--pan:hover::before {
+        transform: scale(1.5) translate3d(0, -100%, 0);
+      }
+      .btn--pan:hover {
+        color: whitesmoke;
+      }
+      .btn a {
+        text-decoration: none;
+      }
+      @media screen and (max-width: 480px) {
       }
     </style>
+    <script>
+      const inputVazio = document.querySelector("#imp");
+      const msg = document.querySelector("#ul");
+      form.addEventListener("submit", (Event) => {
+        Event.preventDefault();
+        const limpo = inputVazio.ariaValueMax.trim();
+        if (!limpo) {
+          msg.innerHTML = `<li class="aviso">Por favor,digite um termo válido</li>`;
+        }
+      });
+    </script>
   </head>
   <body>
     <header>
-      <a href="/" class="btn btn--pan"><span>Voltar</span></a>
+      <a class="btn btn--pan" href="/"><span>Voltar</span></a>
     </header>
     <main>
       <section id="cadastro">
         <h2>Cadastre um Pokemon</h2>
-        <form action="/create" method="post">
+        <form id="form" action="/create" method="post">
           <label for="nome">Nome</label>
-          <input id="nome" type="text" name="nome" />
+          <input id="imp nome" type="text" name="nome" />
 
           <label for="numero">Numero</label>
-          <input id="numero" type="text" name="numero" />
+          <input id="imp numero" type="text" name="numero" />
 
           <label for="tipo">Tipo</label>
-          <input id="tipo" type="text" name="tipo" />
+          <input id="imp tipo" type="text" name="tipo" />
 
           <label for="altura">Altura</label>
-          <input id="altura" type="text" name="altura" />
+          <input id="imp altura" type="text" name="altura" />
 
           <label for="peso">Peso</label>
-          <input id="peso" type="text" name="peso" />
+          <input id="imp peso" type="text" name="peso" />
 
           <label for="habilidade">Habilidade</label>
-          <input id="habilidade" type="text" name="habilidade" />
+          <input id="imp habilidade" type="text" name="habilidade" />
 
           <label for="categoria">Categoria</label>
-          <input id="categoria" type="text" name="categoria" />
+          <input id="imp categoria" type="text" name="categoria" />
 
           <label for="descricao">Descrição:</label>
-          <input id="descricao" type="text" name="descricao" />
+          <input id="imp descricao" type="text" name="descricao" />
 
           <label for="imagem"> Link da imagem</label>
-          <input id="imagem" type="text" name="imagem" />
+          <input id="imp imagem" type="text" name="imagem" />
+          <ul id="ul"></ul>
 
           <button id="btnCadastrar" type="submit">
             <span>Cadastrar</span>
