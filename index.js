@@ -57,7 +57,10 @@ const pokedex = [
 ];
 
 app.get("/", (req, res) => {
-  res.render("index", { pokedex, message });
+  setTimeout(() => {
+    message = "";
+   }, 1000);
+  res.render("index.ejs", { pokedex:pokedex, message });
 });
 
 app.get("/detalhes/:id", (req, res) => {
@@ -73,10 +76,7 @@ app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length;
   pokedex.push(pokemon);
-  message = `O pokemon foi cadastrado com sucesso.`;
-  setTimeout(() => {
-    message = "";
-   }, 2000);
+  message = `O pokemon foi cadastrado com sucesso.`
   res.redirect("/");
 });
 app.listen(port, () =>
