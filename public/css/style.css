@@ -125,16 +125,15 @@ body{
     color: whitesmoke;
 }
 section.mensagem {
-    padding: 1.5rem;
-    background-color: rgb(197, 255, 214);
-    color: #004d04;
+    padding: 0.5rem;
+    background-color: rgba(170, 3, 3, 0.644);
+    color: black;
     position: fixed;
-    top: 3rem;
     left: 0;
     right: 0;
     z-index: 100;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     display: flex;
     align-items: center;
