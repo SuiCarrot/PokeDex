@@ -41,14 +41,14 @@ section#cadastro form button {
   padding: 1rem;
   width: 10rem;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   margin: 0 auto;
   font-size: 1rem;
   background-color: #fff;
   border: solid 1px red;
   color: red;
   cursor: pointer;
-  transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
 }
 section#cadastro form button:hover {
   background-color: red;
