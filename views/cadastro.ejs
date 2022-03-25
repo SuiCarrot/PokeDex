@@ -88,42 +88,42 @@
   </head>
   <body>
     <header>
-      <a class="btn btn--pan" href="/"><span>Voltar</span></a>
+      <a class="btn btn--pan" href="/"><span>Home</span></a>
     </header>
     <main>
       <section id="cadastro">
         <h2>Cadastre um Pokemon</h2>
         <form id="form" action="/create" method="post">
-          <label for="nome">Nome</label>
-          <input id="imp nome" type="text" name="nome" />
+          <label for="nome">Name</label>
+          <input id="imp nome" type="text" name="nome" required/>
 
-          <label for="numero">Numero</label>
-          <input id="imp numero" type="text" name="numero" />
+          <label for="numero">Id</label>
+          <input id="imp numero" type="text" name="numero" required/>
 
-          <label for="tipo">Tipo</label>
-          <input id="imp tipo" type="text" name="tipo" />
+          <label for="tipo">Type</label>
+          <input id="imp tipo" type="text" name="tipo" required/>
 
-          <label for="altura">Altura</label>
-          <input id="imp altura" type="text" name="altura" />
+          <label for="altura">Height</label>
+          <input id="imp altura" type="text" name="altura" required/>
 
-          <label for="peso">Peso</label>
-          <input id="imp peso" type="text" name="peso" />
+          <label for="peso">Weight</label>
+          <input id="imp peso" type="text" name="peso" required/>
 
-          <label for="habilidade">Habilidade</label>
-          <input id="imp habilidade" type="text" name="habilidade" />
+          <label for="habilidade">Abilitie</label>
+          <input id="imp habilidade" type="text" name="habilidade" required/>
 
-          <label for="categoria">Categoria</label>
-          <input id="imp categoria" type="text" name="categoria" />
+          <label for="categoria">Category</label>
+          <input id="imp categoria" type="text" name="categoria" required/>
 
-          <label for="descricao">Descrição:</label>
-          <input id="imp descricao" type="text" name="descricao" />
+          <label for="descricao">Description:</label>
+          <input id="imp descricao" type="text" name="descricao" required/>
 
-          <label for="imagem"> Link da imagem</label>
-          <input id="imp imagem" type="text" name="imagem" />
+          <label for="imagem"> Image Link</label>
+          <input id="imp imagem" type="text" name="imagem" required/>
           <ul id="ul"></ul>
 
           <button id="btnCadastrar" type="submit">
-            <span>Cadastrar</span>
+            <span>Register</span>
           </button>
         </form>
       </section>

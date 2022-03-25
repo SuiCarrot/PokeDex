@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <a href="/" class="voltar voltar--pan"><span>Voltar</span></a>
+      <a href="/" class="voltar voltar--pan"><span>Home</span></a>
     </header>
     <main>
       <section id="pokemons">
@@ -22,10 +22,11 @@
           <div id="texto-detalhes">
             <h2><%= pokemon.nome %> Id: <%=pokemon.numero%></h2>
             <p class="descricao"><%= pokemon.descricao %></p>
+            <p>Type: <%= pokemon.tipo %></p>
             <p>Height: <%= pokemon.altura %> m</p>
             <p>Weight: <%= pokemon.peso %> kg</p>
             <p>Category: <%= pokemon.categoria %></p>
-            <p>Type: <%= pokemon.habilidade %></p>
+            <p>Abilitie: <%= pokemon.habilidade %></p>
           </div>
         </div>
       </section>
