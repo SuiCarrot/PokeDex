@@ -8,4 +8,4 @@ closeMessage.addEventListener("click", () => {
 setTimeout(() => {
     message.style.display = "none !important";
     location.reload();
-}, 3000);
+}, 5000);
