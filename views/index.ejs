@@ -9,10 +9,10 @@
   </head>
   <body>
     <% if(message != "") {  %>
-      <section id="message">
-          <p><%= message %></p> <span id="close">&times;</span>
+      <section class="mensagem">
+          <p><%= message %></p><span class="close">&times;</span>
       </section>
-  <% }  %>
+  <% }  %>    
     <header>
       <a href="./cadastro" class="cadastro cadastro--pan"><span>Cadastrar Pokemon</span></a>
     </header>
@@ -30,8 +30,6 @@
         <% }) %>
       </section>
     </main>
-    <footer>
-    </footer>
   </body>
   <script src="../public/js/script.js"></script>
 </html>

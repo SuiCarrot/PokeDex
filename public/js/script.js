@@ -1,16 +1,11 @@
-const { format } = require("express/lib/response");
+const closeMessage = document.querySelector(".close");
+const message = document.querySelector(".mensagem");
 
-const closeMessage = document.querySelector("#close");
-/* const message = document.querySelector("#message"); */
-const message = document.getElementById("message");
-
-closeMessage.addEventListener("click", function () {
-  /*     message.style.display = "none"; */
-  document.getElementById("message").style.display = "none";
+closeMessage.addEventListener("click", function (){
+    message.style.display = "none";
 });
 
 setTimeout(() => {
-  /*     message.style.display = "none"; */
-  document.getElementById("message").style.display = "none";
+    message.style.display = "none";
+    location.reload();
 }, 3000);
-
