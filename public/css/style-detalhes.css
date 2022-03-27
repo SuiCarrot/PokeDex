@@ -38,7 +38,8 @@ header {
   justify-content: space-evenly;
   text-align: center;
   font-size: 2rem;
-  text-shadow: 0.8px 0.8px grey;
+  color: white;
+  text-shadow: 2px 2px black;
   max-width: 35rem;
 }
 #img-detalhes {
