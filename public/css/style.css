@@ -114,12 +114,11 @@ p {
   margin-bottom: 1rem;
 }
 
-.cards{
-    text-decoration: none;
-    font-family: 'Rubik', sans-serif;
-    transition: all 0.5s ease-in-out 0s;
-    color: white;
-    text-shadow: 2px 2px black;
+.cards {
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  transition: all 0.5s ease-in-out 0s;
+  color: white;
 }
 .cards:hover {
   cursor: pointer;
@@ -275,17 +274,17 @@ span.close:hover {
     resize: both;
     transform: scale(1.1);
   }
-  
-.cards:visited {
+
+  .cards:visited {
     color: white;
     text-shadow: 2px 2px black;
   }
-   
-body{
+
+  body {
     background: url(../img/backgroun-forest.gif);
     background-size: cover;
     background-repeat: no-repeat;
-}
+  }
 
   .cards:visited {
     color: black;
