@@ -280,12 +280,6 @@ span.close:hover {
     text-shadow: 2px 2px black;
   }
 
-  body {
-    background: url(../img/backgroun-forest.gif);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
   .cards:visited {
     color: black;
   }
