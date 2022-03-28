@@ -8,24 +8,27 @@
     <title>PokeDex</title>
   </head>
   <body>
-    <% if(message != "") {  %>
-      <section class="mensagem">
-          <p><%= message %></p><span class="close">&times;</span>
-      </section>
-  <% }  %>    
+    <% if(message != "") { %>
+    <section class="mensagem">
+      <p><%= message %></p>
+      <span class="close">&times;</span>
+    </section>
+    <% } %>
     <header>
-      <a href="./cadastro" class="cadastro cadastro--pan"><span>New Pokemon</span></a>
+      <div class="header">
+        <a href="./cadastro" class="btn btn--pan"><span>New Pokemon</span></a>
+      </div>
     </header>
     <main>
       <section id="pokemons">
         <% pokedex.forEach((pokemon) => { %>
-  <a href="/detalhes/<%= pokemon.id%>" class="cards">
         <div class="cartas">
-          <img src="<%= pokemon.imagem %>" alt="<%= pokemon.imagemAlt %>" />
-          <h2><%= pokemon.nome %> Id: <%=pokemon.numero%></h2>
-          <p class="descricao"><%= pokemon.descricao %></p>
-          <p>Type: <%= pokemon.tipo %></p>
-  </a>
+          <a href="/detalhes/<%= pokemon.id%>" class="cards">
+            <img src="<%= pokemon.imagem %>" alt="<%= pokemon.imagemAlt %>" />
+            <h2><%= pokemon.nome %> Id: <%=pokemon.numero%></h2>
+            <p class="descricao"><%= pokemon.descricao %></p>
+            <p>Type: <%= pokemon.tipo %></p>
+          </a>
         </div>
         <% }) %>
       </section>

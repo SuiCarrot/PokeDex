@@ -3,12 +3,83 @@
 * {
   font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
 
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
 }
 body {
   background-image: url(../img/back-cadastro.png);
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 601px) {
+  header {
+    padding: 2.5rem 0;
+    background-color: red;
+    background-image: url("../img/pokedex-3d-logo.png");
+    background-position: center;
+    background-size: 45vmax;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 4rem;
+  }
+  header div {
+    margin: 0;
+    padding-left: 3rem;
+  }
+  .btn {
+    height: 3rem;
+    width: 10rem;
+    text-decoration: none;
+    pointer-events: auto;
+    cursor: pointer;
+    background: white;
+    font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: red;
+  }
+  .btn::before,
+  .btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn--pan {
+    font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border: 3px solid black;
+    border-radius: 3vmax;
+    overflow: hidden;
+  }
+
+  .btn--pan span {
+    position: relative;
+    mix-blend-mode: difference;
+  }
+
+  .btn--pan::before {
+    content: "";
+    background: rgba(255, 0, 0, 0.904);
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  }
+
+  .btn--pan:hover::before {
+    transform: scale(1.5) translate3d(0, -100%, 0);
+  }
+  .btn--pan:hover {
+    color: whitesmoke;
+  }
+  .btn a {
+    text-decoration: none;
+  }
 }
 section#cadastro {
   display: flex;
@@ -56,3 +127,80 @@ section#cadastro form button:hover {
   color: #fff;
 }
 
+@media screen and (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  img {
+    width: 15rem;
+  }
+
+  header {
+    background-color: red;
+    background-image: url(../img/pokedex-3d-logo.png);
+    background-size: 18rem;
+    background-repeat: no-repeat;
+    background-position: top 0px center;
+    height: 7rem;
+  }
+  header .header {
+    display: flex;
+    padding-top: 4rem;
+    justify-content: center;
+  }
+
+  .btn {
+    height: 2rem;
+    width: 7rem;
+    text-decoration: none;
+    pointer-events: auto;
+    cursor: pointer;
+    background: white;
+    font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: red;
+  }
+  .btn::before,
+  .btn::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .btn--pan {
+    font-family: "Press Start 2P", cursive, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border: 3px solid black;
+    border-radius: 3vmax;
+    overflow: hidden;
+  }
+
+  .btn--pan span {
+    position: relative;
+    mix-blend-mode: difference;
+  }
+
+  .btn--pan::before {
+    content: "";
+    background: rgba(255, 0, 0, 0.904);
+    transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+  }
+
+  .btn--pan:hover::before {
+    transform: scale(1.5) translate3d(0, -100%, 0);
+  }
+  .btn--pan:hover {
+    color: whitesmoke;
+  }
+  .btn a {
+    text-decoration: none;
+  }
+}
